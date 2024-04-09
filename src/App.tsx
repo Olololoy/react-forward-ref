@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import sample from "./components/Sample";
 import Form from "./components/Form";
+import Form2 from "./components/Form2";
+
 import Dialog from "./components/Dialog";
 
 function App() {
@@ -26,11 +28,17 @@ function App() {
 
   return (
     <main>
-      <Form
+      {/* <Form
         handleSubmit={handleSubmit}
         name={name}
         setName={setName}
         ref={inputRef}
+      /> */}
+      <Form2
+        handleSubmit={handleSubmit}
+        name={name}
+        setName={setName}
+        inputRef={inputRef}
       />
       <Dialog closeModal={closeModal} ref={dialogRef}>
         <p>Your name is {name}</p>
